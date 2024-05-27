@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulir Pendaftaran Peminatan</title>
+  </head>
+
+  <body>
+    <nav>
+      <h1>Formulir Pendaftaran Peminatan</h1>
+      <div class="time-container"></div>
+    </nav>
+    <div class="container">
+      <form id="formPendaftaran">
+        <label for="nama">Nama</label>
+        <input style="width: 200px;" type="text" placeholder="Nama Anda" id="nama" />
+
+        <label for="nim">NIM</label>
+        <input style="width: 200px;" type="text" placeholder="NIM anda" id="nim" />
+
+        <p>Peminatan Pada Bidang :</p>
+        <div class="radio-group">
+          <input type="radio" name="peminatan" id="programming" value="programming" />
+          <label for="programming">Programming</label>
+          <input type="radio" name="peminatan" id="desain" value="desain" />
+          <label for="desain">Desain</label>
+          <input type="radio" name="peminatan" id="jaringan" value="jaringan" />
+          <label for="jaringan">Jaringan</label>
+          <input type="radio" name="peminatan" id="data" value="data" />
+          <label for="data">Data</label>
+        </div>
+
+        <label for="angkatan">Angkatan</label>
+        <select style="width: 120px;" name="angkatan" id="angkatan">
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+
+        <label  for="tanggal">Tanggal</label>
+        <input style="width: 100px;" type="text" id="tanggal" readonly />
+
+        <label for="alamat">Alamat</label>
+        <textarea style="width: 350px;"placeholder="Tulis alamat disini" id="alamat" cols="30" rows="5"></textarea>
+
+        <p><br></p>
+        <button type="button" onclick="kirimdata()">Kirim</button>
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="container-footer">
+        <p>
+          PRAKTIKUM PDW - 2024<br />
+          ANDI HARUN AL RASYID
+        </p>
+        <p>CopyRight&copy; 2024</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

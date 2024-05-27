@@ -1,0 +1,26 @@
+function kirimdata() {
+    var name = document.getElementById("nama").value;
+    var nim = document.getElementById("nim").value;
+    var peminatan = document.querySelector('input[name="peminatan"]:checked').value;
+    var alamat = document.getElementById("alamat").value;
+    var tanggal = document.getElementById("tanggal").value;
+    var angkatan = document.getElementById("angkatan").value;
+  
+    alert(
+      "Nama: " + name +
+      "\nNIM: " + nim +
+      "\nPeminatan: " + peminatan +
+      "\nAlamat: " + alamat + 
+      "\nTanggal: " + tanggal +
+      "\nAngkatan: " + angkatan
+    );
+  }
+
+document.addEventListener('DOMContentLoaded', function() {
+    flatpickr("#tanggal", {
+      enableTime: false,
+      dateFormat: "d-m-Y",
+      defaultDate: new Date()
+    });
+  });
+  
